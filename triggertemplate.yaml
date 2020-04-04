@@ -20,6 +20,7 @@ spec:
     metadata:
       generateName: simple-pipeline-run-
     spec:
+      serviceAccountName: tekton-triggers-example-sa
       pipelineRef:
         name: simple-pipeline
       params:

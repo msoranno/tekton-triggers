@@ -4,6 +4,7 @@ kind: EventListener
 metadata:
   name: listener
 spec:
+  # required here to acces cluster resoruces
   serviceAccountName: tekton-triggers-example-sa
   triggers:
     - name: foo-trig

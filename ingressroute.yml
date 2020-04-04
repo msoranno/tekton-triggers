@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: x-listener
+spec:
+  entryPoints:
+  - web
+  routes:
+  - kind: Rule
+    match: Host(`x-listener.iscpcaas.net`) && PathPrefix(`/`)
+    services:
+    - name: el-listener
+      port: 8080
+      namespace: tekton-trigger
